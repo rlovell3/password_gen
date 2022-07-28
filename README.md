@@ -23,7 +23,7 @@ Use the -s flag to modify the character-set used to create the password:
 ```
  Create password of length 30 plus add hyphens
 ```
-    $  ./password_gen.sh -l 30 -H
+    $  ./password_gen.sh -l 30 -s "H"
 ```
 The code defaults to a password length of 20 characters.  
 
