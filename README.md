@@ -38,7 +38,7 @@ Default characters include both uppercase and lowercase letters, plus numerals 0
 
 The -s flag is combined with one of three case selections:
 
-"A":  By default, there are only a few characters allowed in the password generation pool.  Using the -s "A" setting, one gets nearly all of them.
+"A":  By default, there are only a few characters allowed in the password generation pool.  Use the -s "A" setting, to add nearly all of them.
 
 "N": Passing "N" with the -s flag will limit the set of possible characters to uppercase letters, lowercase letters, and the numbers 0-9.
 
