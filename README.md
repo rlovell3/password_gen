@@ -25,15 +25,18 @@ Use the -s flag to modify the character-set used to create the password:
 ```
     $  ./password_gen.sh -l 30 -s "H"
 ```
-The code defaults to a password length of 20 characters.  
+The default password length is 20 characters.
 
 Default characters include both uppercase and lowercase letters, plus numerals 0-9, plus the subset of symbols inside the following braces: { !@+*=#$%& }.  
 
 
 
-The -s flag currently only takes one parameter: "A".  By default, there are only a few characters allowed in the password generation pool.  Using the -s "A" setting, one gets nearly all of them.
+The -s flag is combined with one of three case selections:
 
-Additional -s parameters will include an option for zero symbols, and perhaps an ability to list whatever symbols one may want to make available to the character pool.
+"A":  By default, there are only a few characters allowed in the password generation pool.  Using the -s "A" setting, one gets nearly all of them.
 
-Anyone studying the code will note a raw implementation of /dev/urandom methodology with precise control over the character set one may wish to use. 
+"N": Passing "N" with the -s flag will limit the set of possible characters to uppercase letters, lowercase letters, and the numbers 0-9.
+
+"H":  Passing "H" with the -s flag will cause the password to use the character set of N, but will also add a hyphen after every 4th character.
+
 
