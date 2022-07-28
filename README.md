@@ -25,6 +25,11 @@ Use the -s flag to modify the character-set used to create the password:
 ```
     $  ./password_gen.sh -l 30 -s "H"
 ```
+  Create password of length 25 plus only use letters and numbers:
+```
+    $  ./password_gen.sh -l 25 -s "N"
+```
+
 The default password length is 20 characters.
 
 Default characters include both uppercase and lowercase letters, plus numerals 0-9, plus the subset of symbols inside the following braces: { !@+*=#$%& }.  
