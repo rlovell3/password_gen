@@ -52,21 +52,21 @@ In Linux, when you copy a string, it will stay in the clipboard buffer until you
 
 If you prefer to let your shell do the work for you, install this tool:  xsel
 ```
-sudo apt install xsel
+  sudo apt install xsel
 ```
-# then:
+  then:
 ```
-xsel -bc
+  xsel -bc
 ```
 Unfortunately, this will leave a trace of your password in a temp shell variable.  For example, if you copy something and then use "Shift key" + "Insert key", it will paste what you just had in the clipboard EVEN THOUGH YOU THOUGHT IT WAS CLEARED OUT.
 
 To tidy up this loose end, use another neat Linux tool: xclip
 ```
-sudo apt install xclip
+  sudo apt install xclip
 ```
-# then:
+  then:
 ```
-uptime | xclip
+  uptime | xclip
 ```
 
 The "uptime | xclip" trick will simply copy your uptime into that shell variable, and erase that trace of your password.  I am not certain, but I am about to experiment a bit to see if I can find other variables where that valuable password might still be vulnerable.
