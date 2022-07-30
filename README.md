@@ -71,4 +71,8 @@ To tidy up this loose end, use another neat Linux tool: xclip
 
 The "uptime | xclip" trick will simply copy your uptime into that shell variable, and erase that trace of your password.  I am not certain, but I am about to experiment a bit to see if I can find other variables where that valuable password might still be vulnerable.
 
-I will leave it up to the user to figure out how to combine those two commands, and then store them as an "alias" in your shell to make quick work of copy/paste leaks.
+I created the shell alias "clipclr" to handle my clean-up action:
+ add this to your .bashrc or .zshrc (or even better, add it to your .oh-my-zsh/custom/example.zsh): 
+```
+alias clipclr="xsel -cd && uptime | xclip"
+```
