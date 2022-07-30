@@ -58,9 +58,9 @@ If you prefer to let your shell do the work for you, install this tool:  xsel
 ```
   xsel -bc
 ```
-Unfortunately, this will leave a trace of your password in a temp shell variable.  For example, if you copy something and then use "Shift key" + "Insert key", it will paste what you just had in the clipboard EVEN THOUGH YOU THOUGHT IT WAS CLEARED OUT.
+Unfortunately, even this still will leave a trace of your password in a temp shell variable.  For example, even after clearing your clipboard with this xsel -bc command, if you press the "Shift" + "Insert" keys, it will paste what you just had in the clipboard EVEN THOUGH YOU THOUGHT IT WAS CLEARED OUT. That is because SHIFT+INS is actually pulling a copy from a shell variable rather than the clipboard.
 
-To tidy up this loose end, use another neat Linux tool: xclip
+To tidy up this remaining loose end, use another neat Linux tool: xclip
 ```
   sudo apt install xclip
 ```
@@ -69,7 +69,7 @@ To tidy up this loose end, use another neat Linux tool: xclip
   uptime | xclip
 ```
 
-The "uptime | xclip" trick will simply copy your uptime into that shell variable, and erase that trace of your password.  I am not certain, but I am about to experiment a bit to see if I can find other variables where that valuable password might still be vulnerable.
+The "uptime | xclip" trick will simply copy your uptime into that shell variable, overwriting that trace of your password.
 
 I created the shell alias "clipclr" to handle my clean-up action:
  add this to your .bashrc or .zshrc (or even better, add it to your .oh-my-zsh/custom/example.zsh): 
