@@ -76,3 +76,13 @@ I created the shell alias "clipclr" to handle my clean-up action:
 ```
 alias clipclr="xsel -cd && uptime | xclip"
 ```
+## The whole enchilada:
+1: In terminal, create a password, or several.  
+2: Select the password of your choice and copy it.  Paste into a text file.  
+3: Then, gpg --encrypt that file.
+4: Finally, srm the residual text file once you have an encrypted version of it.
+```
+sudo apt install secure-delete
+man srm
+srm file-to-delete
+```
