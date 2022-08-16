@@ -16,13 +16,15 @@
 ```
   Use the -s flag to modify the character-set used to create the password:
 ```
-    $  ./password_gen.sh -s"A" (for *almost* all symbols)
-    $  ./password_gen.sh -s"N" (for UPPERCASE:A-Z  lowercase:a-z   numerals: 0-9)
+    $  ./password_gen.sh -s"A" (*almost* all symbols)
+    $  ./password_gen.sh -s"N" (UPPERCASE:A-Z  lowercase:a-z   numerals: 0-9)
     $  ./password_gen.sh -s"H" (like "N" but with hyphens every 4 characters)
+    $  ./password_gen.sh -s"S"  (simple, only letters: A-Za-z).
+    $  ./password_gen.sh -s"U" (ALL UPPERCASE: A-Z)
 ```
 Note that you may add whitespace between the flag and the parameter like this:
 ```
-    $  ./password_gen.sh -s "A"
+    $  ./password_gen.sh -s "A"   or ./password_gen.sh -s"A"
 ```
 ## Combine Flags:
   Create password of length 40 plus use all symbols:
@@ -43,13 +45,17 @@ Note that you may add whitespace between the flag and the parameter like this:
 
 
 ## Summary Notes:
- The -s flag is combined with one of three case selections {A,N,H}:
+ The -s flag is combined with one of five possible case selections {A,N,H,S,U}:
 
   -s"A":  By default, there are only a few characters allowed in the password generation pool.  Use the -s"A" setting, to add many more of them.
 
   -s"N": Limits the set of possible characters to uppercase letters, lowercase letters, and the numerals 0-9.
 
-  -s"H":  Use the character set of N, but add a hyphen after every 4th character.
+  -s"H": Use the character set of N, but add a hyphen after every 4th character.
+
+  -s"S": Simple set of letters only:  A-Za-z.
+
+  -s"U": A-Z.  Uppercase letters only.
 
 You may put whitespace between the -s flag and the subsequent case selector. Both ways work.
 
@@ -94,4 +100,5 @@ man srm
 srm file-to-delete
 ```
 ### Changelog
+2022-08-16:Using 'random" instead of "urandom"
 2022-08-06 all files adding signature to commit
