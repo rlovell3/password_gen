@@ -39,4 +39,4 @@ fi
 #  openssl rand -base64 16
 # for i in {1..8} ; do head -$(expr $(head -c7 /dev/urandom | od -An -t dL) % $(wc -l < /usr/share/dict/british-english)) /usr/share/dict/british-english | tail -1 ; done
 # od -An -x /dev/urandom | head -1
-
+#
