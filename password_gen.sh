@@ -10,7 +10,7 @@ do
 done
 
 
-if [ "$length" > 0 ]
+if [ "$length"  ]
 then
   LENGTH1=$length
 else
