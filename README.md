@@ -86,7 +86,7 @@ The "uptime | xclip" trick will simply copy your uptime into that shell variable
 I created the shell alias "clipclr" to handle my clean-up action:
  add this to your .bashrc or .zshrc (or even better, add it to your .oh-my-zsh/custom/example.zsh): 
 ```
-alias clipclr="xsel -cd && uptime | xclip"
+alias clipclr="xsel -bc && uptime | xclip"
 ```
 ## The whole enchilada:
 1. In terminal, create a password, or several.
